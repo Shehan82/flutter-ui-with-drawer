@@ -8,8 +8,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-    );
+    return AnimatedContainer(
+        duration: Duration(microseconds: 20),
+        color: Colors.white,
+        child: Column(
+          children: [
+            Image.asset("assets/images/dog.png"),
+          ],
+        ));
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_with_drawer/configuration.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -23,27 +24,71 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 40,
             ),
             Container(
+              margin: EdgeInsets.symmetric(horizontal: 20),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.menu),
+                  GestureDetector(
+                    onTap: () {
+                      print("bllaaaa");
+                    },
+                    child: Icon(
+                      Icons.menu,
+                      size: 27,
+                    ),
+                  ),
                   Container(
                     child: Column(
                       children: [
                         Container(
-                          child: Text("Location"),
+                          child: Text(
+                            "Location",
+                            style: GoogleFonts.raleway(
+                                fontSize: 15,
+                                color: Colors.grey,
+                                fontWeight: FontWeight.w600),
+                          ),
                         ),
                         Container(
+                            margin: EdgeInsets.only(top: 5),
                             child: Row(
-                          children: [
-                            Icon(Icons.location_on),
-                            Text(
-                              "Maraluwawa, Kurunegala",
-                              style: GoogleFonts.roboto(fontSize: 20),
-                            )
-                          ],
-                        ))
+                              children: [
+                                Icon(
+                                  Icons.location_on,
+                                  color: primaryGreen,
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(left: 5),
+                                  child: Row(
+                                    children: [
+                                      Text(
+                                        "Kurunegala, ",
+                                        style: GoogleFonts.raleway(
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.w700),
+                                      ),
+                                      Text(
+                                        "SriLanka",
+                                        style: GoogleFonts.raleway(
+                                            fontSize: 17,
+                                            color: Colors.grey,
+                                            fontWeight: FontWeight.w800),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ))
                       ],
                     ),
+                  ),
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/tt.jpg'))),
                   )
                 ],
               ),

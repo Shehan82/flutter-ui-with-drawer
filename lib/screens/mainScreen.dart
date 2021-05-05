@@ -10,8 +10,10 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [DrawerScreen(), HomeScreen()],
+    return Scaffold(
+      body: Stack(
+        children: [DrawerScreen(), HomeScreen()],
+      ),
     );
   }
 }

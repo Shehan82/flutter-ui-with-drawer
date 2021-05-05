@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_ui_with_drawer/configuration.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,12 +20,12 @@ class _HomeScreenState extends State<HomeScreen> {
         transform: Matrix4.translationValues(xOffSet, yOffSet, 0)
           ..scale(scaleFactor),
         duration: Duration(microseconds: 250),
-        color: Colors.white,
-        child: Column(
+        color: Colors.grey[100],
+        child: ListView(
+          physics: ClampingScrollPhysics(),
           children: [
-            Text("hellooo"),
             SizedBox(
-              height: 40,
+              height: 20,
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20),
@@ -118,6 +119,27 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
+            Container(
+              child: Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(color: Colors.white),
+                    width: 200,
+                    height: 40,
+                    child: TextField(
+                      decoration: InputDecoration(
+                          prefixIcon: Icon(Icons.ac_unit),
+                          border: InputBorder.none,
+                          focusedBorder: InputBorder.none,
+                          enabledBorder: InputBorder.none,
+                          errorBorder: InputBorder.none,
+                          disabledBorder: InputBorder.none,
+                          hintText: 'Enter a search term'),
+                    ),
+                  )
+                ],
+              ),
+            )
           ],
         ));
   }

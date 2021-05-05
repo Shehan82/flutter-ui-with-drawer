@@ -15,6 +15,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
+        transform: Matrix4.translationValues(xOffSet, yOffSet, 0)
+          ..scale(scaleFactor),
         duration: Duration(microseconds: 250),
         color: Colors.white,
         child: Column(
@@ -30,7 +32,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      print("bllaaaa");
+                      setState(() {
+                        xOffSet = 230;
+                        yOffSet = 150;
+                        scaleFactor = 0.6;
+                      });
                     },
                     child: Icon(
                       Icons.menu,

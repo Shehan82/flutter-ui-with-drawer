@@ -119,22 +119,41 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
+            SizedBox(
+              height: 60,
+            ),
             Container(
               child: Column(
                 children: [
                   Container(
-                    decoration: BoxDecoration(color: Colors.white),
-                    width: 200,
-                    height: 40,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20)),
+                    width: 320,
+                    height: 50,
                     child: TextField(
+                      style: GoogleFonts.raleway(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w700,
+                          color: primaryGreen),
                       decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.ac_unit),
+                          prefixIcon: Icon(
+                            Icons.search,
+                            color: Colors.grey,
+                          ),
+                          suffixIcon: Icon(
+                            Icons.settings,
+                            color: Colors.grey,
+                          ),
+                          contentPadding: EdgeInsets.only(top: 14),
                           border: InputBorder.none,
                           focusedBorder: InputBorder.none,
                           enabledBorder: InputBorder.none,
                           errorBorder: InputBorder.none,
                           disabledBorder: InputBorder.none,
-                          hintText: 'Enter a search term'),
+                          hintText: 'Search pet to adopt',
+                          hintStyle: GoogleFonts.raleway(
+                              fontSize: 15, fontWeight: FontWeight.w500)),
                     ),
                   )
                 ],

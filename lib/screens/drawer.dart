@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_with_drawer/configuration.dart';
 
 class DrawerScreen extends StatefulWidget {
   @override
@@ -9,7 +10,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+            Color(0xff1c5a54).withOpacity(0.9),
+            Color(0xff1c5a54).withOpacity(1)
+          ])),
     );
   }
 }

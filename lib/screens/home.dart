@@ -11,6 +11,7 @@ class _HomeScreenState extends State<HomeScreen> {
   double xOffSet = 0;
   double yOffSet = 0;
   double scaleFactor = 1;
+  bool isPressed = false;
 
   @override
   Widget build(BuildContext context) {
@@ -30,18 +31,36 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        xOffSet = 230;
-                        yOffSet = 150;
-                        scaleFactor = 0.6;
-                      });
-                    },
-                    child: Icon(
-                      Icons.menu,
-                      size: 27,
-                    ),
+                  Container(
+                    child: isPressed
+                        ? GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                xOffSet = 0;
+                                yOffSet = 0;
+                                scaleFactor = 1;
+                                isPressed = false;
+                              });
+                            },
+                            child: Icon(
+                              Icons.arrow_back_ios,
+                              size: 27,
+                            ),
+                          )
+                        : GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                xOffSet = 230;
+                                yOffSet = 150;
+                                scaleFactor = 0.6;
+                                isPressed = true;
+                              });
+                            },
+                            child: Icon(
+                              Icons.menu,
+                              size: 27,
+                            ),
+                          ),
                   ),
                   Container(
                     child: Column(

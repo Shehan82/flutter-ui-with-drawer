@@ -129,8 +129,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20)),
-                    width: 320,
-                    height: 50,
+                    width: 340,
+                    height: 45,
                     child: TextField(
                       style: GoogleFonts.raleway(
                           fontSize: 15,
@@ -145,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Icons.settings,
                             color: Colors.grey,
                           ),
-                          contentPadding: EdgeInsets.only(top: 14),
+                          contentPadding: EdgeInsets.only(top: 12),
                           border: InputBorder.none,
                           focusedBorder: InputBorder.none,
                           enabledBorder: InputBorder.none,
@@ -155,6 +155,61 @@ class _HomeScreenState extends State<HomeScreen> {
                           hintStyle: GoogleFonts.raleway(
                               fontSize: 15, fontWeight: FontWeight.w500)),
                     ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: 120,
+                    margin: EdgeInsets.only(left: 20),
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: categories.length,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            width: 100,
+                            height: 100,
+                            margin: EdgeInsets.only(
+                              right: 0,
+                            ),
+                            // color: Colors.grey[700],
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 70,
+                                  height: 70,
+                                  padding: EdgeInsets.all(12),
+                                  margin: EdgeInsets.only(bottom: 12, top: 12),
+                                  decoration: BoxDecoration(
+                                      boxShadow: [
+                                        BoxShadow(
+                                          blurRadius: 7,
+                                          spreadRadius: 5,
+                                          color: primaryGreen.withOpacity(0.5),
+                                          offset: Offset(0, 3),
+                                        )
+                                      ],
+                                      color: primaryGreen,
+                                      borderRadius: BorderRadius.circular(15)),
+                                  child: Image.asset(
+                                    'assets/images/horse.png',
+                                    color: Colors.white,
+                                    width: 20,
+                                    height: 20,
+                                    fit: BoxFit.fill,
+                                  ),
+                                ),
+                                Text(
+                                  "horse",
+                                  style: GoogleFonts.raleway(
+                                      fontSize: 16,
+                                      color: Colors.grey[600],
+                                      fontWeight: FontWeight.w600),
+                                )
+                              ],
+                            ),
+                          );
+                        }),
                   )
                 ],
               ),

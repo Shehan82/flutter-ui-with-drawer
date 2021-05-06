@@ -8,7 +8,7 @@ class DrawerScreen extends StatefulWidget {
 }
 
 class _DrawerScreenState extends State<DrawerScreen> {
-  String title;
+  String title = "Adoption";
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -95,16 +95,24 @@ class _DrawerScreenState extends State<DrawerScreen> {
                             Container(
                                 child: Icon(
                               drawerItems[index]["icon"],
-                              color: Colors.white70,
+                              color: title == drawerItems[index]["title"]
+                                  ? Colors.white
+                                  : Colors.white70.withOpacity(0.4),
                             )),
                             Container(
                                 margin: EdgeInsets.only(left: 15),
                                 child: Text(
                                   drawerItems[index]["title"],
                                   style: GoogleFonts.raleway(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w700,
-                                      color: Colors.white70),
+                                    fontSize:
+                                        title == drawerItems[index]["title"]
+                                            ? 17
+                                            : 16,
+                                    fontWeight: FontWeight.w700,
+                                    color: title == drawerItems[index]["title"]
+                                        ? Colors.white
+                                        : Colors.white70.withOpacity(0.4),
+                                  ),
                                 ))
                           ],
                         ),

@@ -158,7 +158,7 @@ class _AnimalDetailsState extends State<AnimalDetails> {
                 ),
               )),
           Positioned(
-              top: 500,
+              top: (MediaQuery.of(context).size.height / 2) + 140,
               width: MediaQuery.of(context).size.width - 20,
               child: Container(
                 margin: EdgeInsets.only(left: 20),
@@ -218,6 +218,16 @@ class _AnimalDetailsState extends State<AnimalDetails> {
                             ),
                           )
                         ],
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 20),
+                      child: Text(
+                        "Hello how are you! this cat is from canada. they are very calmful because of there mohther land. they are like orange color you guys will agree with me when you see.",
+                        style: GoogleFonts.raleway(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black.withOpacity(0.6)),
                       ),
                     )
                   ],

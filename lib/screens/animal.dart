@@ -3,14 +3,20 @@ import 'package:flutter_ui_with_drawer/configuration.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AnimalContainer extends StatelessWidget {
-  String name;
-  String type;
-  String age;
-  String distance;
-  String imagePath;
+  final String name;
+  final String type;
+  final String age;
+  final String distance;
+  final String imagePath;
+  final Color color;
 
   AnimalContainer(
-      {this.name, this.type, this.age, this.distance, this.imagePath});
+      {this.name,
+      this.type,
+      this.age,
+      this.distance,
+      this.imagePath,
+      this.color});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,7 +34,7 @@ class AnimalContainer extends StatelessWidget {
                 margin: EdgeInsets.only(top: 30),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: Color(0xffc4d4d4),
+                  color: color,
                 ),
               ),
               Container(
@@ -37,7 +43,7 @@ class AnimalContainer extends StatelessWidget {
                 // color: Colors.grey,
                 // padding: EdgeInsets.all(20),
                 child: Image.asset(
-                  'assets/images/pet-cat1.png',
+                  imagePath,
                 ),
               ),
             ],
@@ -61,7 +67,7 @@ class AnimalContainer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Orion",
+                        name,
                         style: GoogleFonts.raleway(
                             fontSize: 20,
                             fontWeight: FontWeight.w900,
@@ -82,7 +88,7 @@ class AnimalContainer extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(left: 6),
                   alignment: Alignment.centerLeft,
-                  child: Text("Abbysinnion cat",
+                  child: Text(type,
                       style: GoogleFonts.raleway(
                           fontSize: 14,
                           fontWeight: FontWeight.w800,
@@ -91,7 +97,7 @@ class AnimalContainer extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(top: 13, left: 6),
                   alignment: Alignment.centerLeft,
-                  child: Text("2 years old",
+                  child: Text(age + " years old",
                       style: GoogleFonts.raleway(
                           fontSize: 12,
                           fontWeight: FontWeight.w800,
@@ -108,7 +114,7 @@ class AnimalContainer extends StatelessWidget {
                       Icon(Icons.location_on_rounded, color: primaryGreen),
                       Container(
                           margin: EdgeInsets.only(left: 8),
-                          child: Text("Distance: 7.5km",
+                          child: Text("Distance: " + distance,
                               style: GoogleFonts.raleway(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w800,

@@ -235,8 +235,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     height: 5,
                   ),
-                  AnimalContainer(name: "helllo"),
-                  AnimalContainer(),
+                  AnimalContainer(
+                    name: "Orion",
+                    age: "2",
+                    distance: "7.5Km",
+                    imagePath: 'assets/images/pet-cat1.png',
+                    type: "Abbysinnion cat",
+                    color: Color(0xffc4d4d4),
+                  ),
+                  AnimalContainer(
+                      name: "Sola",
+                      age: "1",
+                      distance: "3.6Km",
+                      imagePath: 'assets/images/pet-cat2.png',
+                      type: "Americans cat",
+                      color: Color(0xffeccc9c)),
                 ],
               ),
             )

@@ -176,28 +176,46 @@ class _HomeScreenState extends State<HomeScreen> {
                             // color: Colors.grey[700],
                             child: Column(
                               children: [
-                                Container(
-                                  width: 70,
-                                  height: 70,
-                                  padding: EdgeInsets.all(12),
-                                  margin: EdgeInsets.only(bottom: 12, top: 12),
-                                  decoration: BoxDecoration(
-                                      boxShadow: [
-                                        BoxShadow(
-                                          blurRadius: 7,
-                                          spreadRadius: 2,
-                                          color: primaryGreen.withOpacity(0.5),
-                                          offset: Offset(0, 4),
-                                        )
-                                      ],
-                                      color: primaryGreen,
-                                      borderRadius: BorderRadius.circular(15)),
-                                  child: Image.asset(
-                                    categories[index]["iconPath"],
-                                    color: Colors.white,
-                                    width: 20,
-                                    height: 20,
-                                    fit: BoxFit.fill,
+                                GestureDetector(
+                                  onTap: () {
+                                    print(categories[index]["name"]);
+                                    setState(() {
+                                      animal = categories[index]["name"];
+                                    });
+                                  },
+                                  child: Container(
+                                    width: 70,
+                                    height: 70,
+                                    padding: EdgeInsets.all(14),
+                                    margin:
+                                        EdgeInsets.only(bottom: 12, top: 12),
+                                    decoration: BoxDecoration(
+                                        boxShadow: [
+                                          BoxShadow(
+                                            blurRadius: 7,
+                                            spreadRadius: 2,
+                                            color: animal ==
+                                                    categories[index]["name"]
+                                                ? primaryGreen.withOpacity(0.5)
+                                                : Colors.grey.withOpacity(0.5),
+                                            offset: Offset(0, 4),
+                                          )
+                                        ],
+                                        color:
+                                            animal == categories[index]["name"]
+                                                ? primaryGreen
+                                                : Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    child: Image.asset(
+                                      categories[index]["iconPath"],
+                                      color: animal == categories[index]["name"]
+                                          ? Colors.white
+                                          : Colors.grey,
+                                      width: 20,
+                                      height: 20,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
                                 Text(

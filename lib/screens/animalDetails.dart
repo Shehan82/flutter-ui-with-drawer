@@ -12,9 +12,21 @@ class _AnimalDetailsState extends State<AnimalDetails> {
       body: Stack(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height / 2,
-            color: Colors.black,
-          )
+            height: (MediaQuery.of(context).size.height / 2) + 50,
+            color: Color(0xffc4d4d4),
+          ),
+          Positioned(
+              width: 200,
+              left: (MediaQuery.of(context).size.width / 2) - 100,
+              top: 60,
+              child: Container(
+                child: Container(
+                  color: Colors.grey,
+                  child: Image.asset(
+                    'assets/images/pet-cat1.png',
+                  ),
+                ),
+              ))
         ],
       ),
     );

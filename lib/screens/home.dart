@@ -233,9 +233,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         }),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
-                  AnimalContainer()
+                  AnimalContainer(name: "helllo"),
+                  AnimalContainer(),
                 ],
               ),
             )

@@ -3,6 +3,14 @@ import 'package:flutter_ui_with_drawer/configuration.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AnimalContainer extends StatelessWidget {
+  String name;
+  String type;
+  String age;
+  String distance;
+  String imagePath;
+
+  AnimalContainer(
+      {this.name, this.type, this.age, this.distance, this.imagePath});
   @override
   Widget build(BuildContext context) {
     return Container(

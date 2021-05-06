@@ -120,6 +120,50 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     ),
                   );
                 }),
+          ),
+          Spacer(),
+          Container(
+            height: 70,
+            // color: Colors.amber,
+            padding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
+            child: Row(
+              children: [
+                Container(
+                  child: Icon(
+                    Icons.settings,
+                    color: Colors.white70.withOpacity(0.4),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 15, right: 15),
+                  child: Text(
+                    "Settings",
+                    style: GoogleFonts.raleway(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white70.withOpacity(0.4),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: Text("|",
+                      style: GoogleFonts.raleway(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white70.withOpacity(0.4),
+                      )),
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 15, right: 15),
+                  child: Text("Log out",
+                      style: GoogleFonts.raleway(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white70.withOpacity(0.4),
+                      )),
+                )
+              ],
+            ),
           )
         ],
       ),

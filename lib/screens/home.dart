@@ -20,10 +20,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
+        decoration: BoxDecoration(
+          borderRadius:
+              isPressed ? BorderRadius.circular(25) : BorderRadius.circular(0),
+          color: Colors.grey[100],
+        ),
         transform: Matrix4.translationValues(xOffSet, yOffSet, 0)
           ..scale(scaleFactor),
         duration: Duration(microseconds: 250),
-        color: Colors.grey[100],
         child: ListView(
           physics: ClampingScrollPhysics(),
           children: [

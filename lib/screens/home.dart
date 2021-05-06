@@ -229,6 +229,40 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           );
                         }),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    // color: Colors.black,
+                    margin: EdgeInsets.symmetric(horizontal: 20),
+                    height: 200,
+                    child: Row(
+                      children: [
+                        Stack(
+                          children: [
+                            Container(
+                              width: 160,
+                              height: 200,
+                              margin: EdgeInsets.only(top: 30),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Color(0xffc4d4d4),
+                              ),
+                            ),
+                            Container(
+                              width: 160,
+                              height: 200,
+                              // color: Colors.grey,
+                              // padding: EdgeInsets.all(20),
+                              child: Image.asset(
+                                'assets/images/pet-cat1.png',
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),

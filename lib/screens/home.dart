@@ -238,6 +238,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     margin: EdgeInsets.symmetric(horizontal: 20),
                     height: 200,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Stack(
                           children: [
@@ -246,7 +247,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 200,
                               margin: EdgeInsets.only(top: 30),
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
+                                borderRadius: BorderRadius.circular(15),
                                 color: Color(0xffc4d4d4),
                               ),
                             ),
@@ -260,6 +261,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                           ],
+                        ),
+                        Container(
+                          width: 180,
+                          height: 200,
+                          margin: EdgeInsets.only(top: 40, bottom: 10),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(15),
+                                  bottomRight: Radius.circular(15))),
                         )
                       ],
                     ),

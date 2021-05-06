@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_with_drawer/screens/animalDetails.dart';
 import 'package:flutter_ui_with_drawer/screens/drawer.dart';
 import 'package:flutter_ui_with_drawer/screens/mainScreen.dart';
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainScreen(),
+      home: AnimalDetails(),
     );
   }
 }

@@ -13,6 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   double yOffSet = 0;
   double scaleFactor = 1;
   bool isPressed = false;
+  String animal = "Cats";
 
   @override
   Widget build(BuildContext context) {
@@ -184,15 +185,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                       boxShadow: [
                                         BoxShadow(
                                           blurRadius: 7,
-                                          spreadRadius: 5,
+                                          spreadRadius: 2,
                                           color: primaryGreen.withOpacity(0.5),
-                                          offset: Offset(0, 3),
+                                          offset: Offset(0, 4),
                                         )
                                       ],
                                       color: primaryGreen,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Image.asset(
-                                    'assets/images/horse.png',
+                                    categories[index]["iconPath"],
                                     color: Colors.white,
                                     width: 20,
                                     height: 20,
@@ -200,7 +201,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                                 Text(
-                                  "horse",
+                                  categories[index]["name"],
                                   style: GoogleFonts.raleway(
                                       fontSize: 16,
                                       color: Colors.grey[600],

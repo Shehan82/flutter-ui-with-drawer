@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_with_drawer/configuration.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AnimalDetails extends StatefulWidget {
@@ -231,6 +232,68 @@ class _AnimalDetailsState extends State<AnimalDetails> {
                       ),
                     )
                   ],
+                ),
+              )),
+          Positioned(
+              bottom: 0,
+              child: Container(
+                height: 100,
+                decoration: BoxDecoration(
+                    color: Colors.grey.withOpacity(0.1),
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20))),
+                width: MediaQuery.of(context).size.width,
+                child: Container(
+                  margin: EdgeInsets.only(left: 30, right: 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                blurRadius: 7,
+                                spreadRadius: 2,
+                                color: primaryGreen.withOpacity(0.5),
+                                offset: Offset(0, 4),
+                              )
+                            ],
+                            color: primaryGreen,
+                            borderRadius: BorderRadius.circular(15)),
+                        width: 50,
+                        height: 40,
+                        child: Icon(
+                          FontAwesomeIcons.heart,
+                          color: Colors.white,
+                          size: 18,
+                        ),
+                      ),
+                      Container(
+                        alignment: Alignment.center,
+                        width: 200,
+                        height: 40,
+                        decoration: BoxDecoration(
+                            color: primaryGreen,
+                            boxShadow: [
+                              BoxShadow(
+                                blurRadius: 7,
+                                spreadRadius: 2,
+                                color: primaryGreen.withOpacity(0.5),
+                                offset: Offset(0, 4),
+                              )
+                            ],
+                            borderRadius: BorderRadius.circular(15)),
+                        child: Text(
+                          "Adoption",
+                          style: GoogleFonts.raleway(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ))
         ],

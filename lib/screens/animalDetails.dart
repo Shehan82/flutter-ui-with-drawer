@@ -47,10 +47,15 @@ class _AnimalDetailsState extends State<AnimalDetails> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(
-                      Icons.arrow_back,
-                      size: 30,
-                      color: Colors.grey[800],
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Icon(
+                        Icons.arrow_back,
+                        size: 30,
+                        color: Colors.grey[800],
+                      ),
                     ),
                     Icon(
                       Icons.cloud_upload_outlined,
@@ -224,7 +229,7 @@ class _AnimalDetailsState extends State<AnimalDetails> {
                     Container(
                       margin: EdgeInsets.only(top: 20),
                       child: Text(
-                        "Hello how are you! this cat is from canada. they are very calmful because of there mohther land. they are like orange color you guys will agree with me when you see.",
+                        "blaaa blaaa blaaaa blaaaaaaaaaaaaa blaa blaaaa blaaa blaaa blaaa blaaaaaaaaaaaaaaaaaa blaaa blaaaa blaaaa blaaaa blaa blaaaaaaa blaa blaaa blaaaa",
                         style: GoogleFonts.raleway(
                             fontSize: 13,
                             fontWeight: FontWeight.w700,
